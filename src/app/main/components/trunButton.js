@@ -1,4 +1,3 @@
-import "./trunButton.css";
 import { useSelector } from 'react-redux';
 
 const TrunButton = ({ clickTrunCard }) => {

@@ -1,4 +1,3 @@
-import "./Message4.css"
 import { useSelector } from 'react-redux';
 
 // 勝利条件を表示するテキスト

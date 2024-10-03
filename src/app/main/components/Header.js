@@ -1,6 +1,5 @@
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import XIcon from '@mui/icons-material/X';
-import "./Header.css";
 import { useSelector } from 'react-redux';
 
 const Header = () => {

@@ -1,4 +1,3 @@
-import "./Message1.css"
 import { useSelector } from 'react-redux';
 
 // 2枚のカードの関係性を表示するテキスト

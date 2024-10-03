@@ -8,7 +8,6 @@ import Cards from './components/Cards'
 import Message2 from './components/Message2'
 import Buttons from './components/Buttons'
 import BetPointDisp from './components/betPointDisp'
-import "./Main.css"
 import Message3 from './components/Message3'
 import Message4 from './components/Message4'
 import Guidance from './components/Guidance'

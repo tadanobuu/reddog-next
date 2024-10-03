@@ -1,4 +1,3 @@
-import "./Message3.css"
 import { useSelector } from 'react-redux';
 
 // 勝敗結果を表示するテキスト

@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../../../features/cart/PointSlice';
-import "./raizeButton.css"
 import { chooseRaisetoFalse } from '../../../features/buttons/ButtonsSlice';
 
 const RaizeButton = () => {
