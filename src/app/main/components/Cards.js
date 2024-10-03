@@ -1,4 +1,3 @@
-import "./Cards.css"
 import { useSelector } from 'react-redux';
 
 const Cards = () => {

@@ -1,4 +1,3 @@
-import "./Message2.css"
 import { useSelector } from 'react-redux';
 
 // オッズを表示するテキスト

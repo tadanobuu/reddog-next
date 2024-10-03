@@ -1,4 +1,3 @@
-import "./Character.css"
 import redDog from "../dogs/red.png"
 import purpleDog from "../dogs/purple.png"
 import yellowDog from "../dogs/yellow.png"

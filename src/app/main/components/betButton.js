@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { add, minus } from '../../../features/cart/PointSlice';
 import { newGame } from '../../../features/game/GameSlice';
-import "./betButton.css";
 import { betTimetoFalse } from '../../../features/buttons/ButtonsSlice';
 
 const BetButton = () => {

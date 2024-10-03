@@ -1,4 +1,3 @@
-import "./Button.css";
 import BetButton from './buttons/betButton';
 import RaizeButton from './buttons/raizeButton';
 import TrunButton from './buttons/trunButton';
@@ -34,7 +33,11 @@ const Buttons = () => {
   const clickTrunCard = () => {
     // ボタン押下後に待機時間を設ける
     setTimeout(() => {
-      isWin ? dispatch(win(odds)) : dispatch(lose());
+      if(iswin){
+        dispatch(win(odds));
+      }else{
+        dispatch(lose());
+      }
       dispatch(cardOpen());
       dispatch(gameResult(isWin ? point + (odds * betPoint) : 0));
       dispatch(gameHistory(isWin ? odds > 1 ? "win" : "draw" : "lose"));

@@ -1,4 +1,3 @@
-import "./GameoverAndResult.css"
 import { useSelector } from 'react-redux'
 
 // ゲームオーバー、ゲームをトータルしたリザルトの表記

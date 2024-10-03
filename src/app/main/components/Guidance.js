@@ -1,4 +1,3 @@
-import "./Guidance.css"
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PetsIcon from '@mui/icons-material/Pets';
 
