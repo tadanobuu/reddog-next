@@ -31,6 +31,7 @@ const Main = () => {
                 <Header />
                 <main className="container mx-auto px-4 py-8">
                     <div className="grid md:grid-cols-2 gap-8">
+                        <div className="relative">
                         <Character />
                         {!noGuidance ? 
                             <div className='bg-table-color border-4 border-black' style={{"borderRadius": "60px"}}>
@@ -58,6 +59,7 @@ const Main = () => {
                             <Buttons /> 
                             </>
                         }
+                        </div>
                         <GameDetail />
                     </div>
                 </main>

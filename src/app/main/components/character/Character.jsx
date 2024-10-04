@@ -46,11 +46,11 @@ const Character = () => {
     }
 
     return (
-        <div className='img'>
+        <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
             {
                 totalPoint ?
-                <img src={dog} className='dog' alt='somevalue'/> :
-                <img src={dog} className='dog' alt='somevalue' style={{'visibility': 'hidden'}} /> // 犬消滅
+                <img src={dog} className="w-24 h-24 rounded-full border-4 border-yellow-400 shadow-lg" alt='somevalue'/> :
+                <img src={dog} className="w-24 h-24 rounded-full border-4 border-yellow-400 shadow-lg hidden" alt='somevalue'/> // 犬消滅
             }
         </div>
     )
