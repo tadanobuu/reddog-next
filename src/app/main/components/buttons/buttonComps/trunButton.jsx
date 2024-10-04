@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Button } from '@/components/ui/button';
 
 const TrunButton = ({ clickTrunCard }) => {
 
@@ -37,7 +38,7 @@ const TrunButton = ({ clickTrunCard }) => {
 
     return (
         <div className='trun'>
-            <button className='trunCard' style={style} onClick={() => clickTrunCard()}>OPEN</button>
+            <Button className='trunCard' style={style} onClick={() => clickTrunCard()}>OPEN</Button>
         </div>
     )
 }

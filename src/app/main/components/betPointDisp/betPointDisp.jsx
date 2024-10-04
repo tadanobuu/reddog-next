@@ -5,7 +5,7 @@ const BetPointDisp = () => {
   const { betPoint } = useSelector((store) => store.point);
 
   return (
-    <div className='price'>
+    <div className="text-center text-sm mt-4">
       <p className='betPt'>Bet {betPoint}pt</p>
     </div>
   )

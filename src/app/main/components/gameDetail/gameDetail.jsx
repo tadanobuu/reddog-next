@@ -1,42 +1,76 @@
 import { useSelector } from "react-redux"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } from "@/components/ui/table"
 
 const GameDetail = () => {
 
     const { maxPoint, gameCount, winCount, loseCount, resultHistory } = useSelector((store) => store.result)
 
-    return (
-        <div>
-            <div className="results">
-                <div>最高得点 : {maxPoint}pt</div>
-                <div>ゲーム回数 : {gameCount}</div>
-                <div className="counts">
-                    <div>勝利回数 : {winCount}</div>
-                    <div>敗北回数 : {loseCount}</div>
-                    <div>引分回数 : {gameCount - winCount - loseCount}</div>
-                    <div>勝率 : {gameCount ? Math.floor(winCount / (gameCount) * 10000) / 100 : "---"} %</div>
+    return(
+        <div className="stats-area">
+            <Card>
+              <CardHeader>
+                <CardTitle>ゲーム統計</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm font-medium">最高得点</p>
+                    <p className="text-2xl font-bold">{maxPoint}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">ゲーム回数</p>
+                    <p className="text-2xl font-bold">{gameCount}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">勝利</p>
+                    <p className="text-2xl font-bold">{winCount}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">敗北</p>
+                    <p className="text-2xl font-bold">{loseCount}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">引分</p>
+                    <p className="text-2xl font-bold">{resultHistory}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">勝率</p>
+                    <p className="text-2xl font-bold">
+                        {gameCount ? Math.floor(winCount / (gameCount) * 10000) / 100 : "---"}%
+                    </p>
+                  </div>
                 </div>
-            </div>
-            <div className="resultHist">
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col" className="gameCounts">ゲーム数</th>
-                            <th scope="col">結果</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {resultHistory.map((result, index) => {
-                            return(
-                                <tr key={index}>
-                                    <td>{result[0]}</td>
-                                    <td>{result[1]}</td>
-                                </tr>
-                            )
-                        })} 
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold mb-2">直近10ゲームの履歴</h3>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-[100px]">ゲーム</TableHead>
+                        <TableHead>結果</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {resultHistory.map((result, index) => (
+                        <TableRow key={index}>
+                          <TableCell className="font-medium">#{result[0]}</TableCell>
+                          <TableCell>{result[1]}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
     )
 }
 

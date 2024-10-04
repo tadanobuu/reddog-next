@@ -1,6 +1,7 @@
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import XIcon from '@mui/icons-material/X';
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
+import Link from 'next/link'
+import { Button } from "@/components/ui/button"
+import { Info, Share2 } from 'lucide-react'
 
 const Header = () => {
 
@@ -47,25 +48,29 @@ const Header = () => {
     }
 
     return (
-        <div className='header'>
-            <div className='havePt'>
-                <em>持ち</em>
-                <em className='pt'>{point}</em>
-                <em>pt</em>
+        <div className="bg-gray-800 p-4 flex flex-wrap justify-between items-center border-b border-gray-700">
+            <h1 className="text-2xl font-bold mb-2 md:mb-0 flex-grow text-left">RedDog</h1>
+            <div className="flex-grow text-center">
+                <p className="text-sm">所持ポイント: {point}</p>
+                { totalPoint >= 50000 ?
+                    <p className="text-xs text-gray-400"></p>
+                    :
+                    <p className="text-xs text-gray-400">{text1}まであと: {text2}ポイント</p>
+                }
             </div>
-            {
-                totalPoint >= 50000 ?
-                <div className='nextChar'></div>
-                :
-                <div className='nextChar'>
-                    <em>{text1}まで</em>
-                    <em className='pt'>{text2}</em>
-                    <em>pt</em>
-                </div>
-            }
-            <div className='icon'>
-                <button className='menuBtn' onClick={() => {}}><MenuBookIcon /></button>
-                <a className='xbutton' href={'http://twitter.com/share?url=https://reddog-app-caccb.web.app/&text=' + (totalPoint) + 'pt持っています！%20%23レッドドッグ%20'} target='_blank' rel='noopener noreferrer'><XIcon/></a>
+            <div className="flex flex-grow justify-end space-x-4">
+                <Link href="/rules" passHref>
+                <Button variant="outline" size="sm">
+                    <Info className="w-4 h-4 mr-2" />
+                    ルール
+                </Button>
+                </Link>
+                <Button variant="outline" size="sm" onClick={() => {}}>
+                    <Share2 className="w-4 h-4 mr-2" />
+                    <a href={'http://twitter.com/share?url=https://reddog-app-caccb.web.app/&text=' + (totalPoint) + 'pt持っています！%20%23レッドドッグ%20'} target='_blank' rel='noopener noreferrer'>
+                        Xでシェア
+                    </a>
+                </Button>
             </div>
         </div>
     )
