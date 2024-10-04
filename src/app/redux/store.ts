@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import pointReducer from "./features/points/PointSlice";
-import gameReducer from "./features/game/GameSlice";
-import resultReducer from "./features/result/ResultSlice";
-import buttonsReducer from "./features/buttons/ButtonsSlice";
+import pointReducer from "./slices/PointSlice";
+import gameReducer from "./slices/GameSlice";
+import resultReducer from "./slices/ResultSlice";
+import buttonsReducer from "./slices/ButtonsSlice";
 
 export const store = configureStore({
     reducer: {
