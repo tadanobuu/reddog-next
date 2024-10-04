@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { add } from '../../../redux/slices/PointSlice';
-import { chooseRaisetoFalse } from '../../../redux/slices/ButtonsSlice';
+import { add } from '../../../../redux/slices/PointSlice';
+import { chooseRaisetoFalse } from '../../../../redux/slices/ButtonsSlice';
+import { Button } from '@/components/ui/button';
 
 const RaizeButton = () => {
 
@@ -19,14 +20,14 @@ const RaizeButton = () => {
             <p className='raizeText'>bet額を倍にしますか？</p>
             {
                 chk ?
-                <button className='raize' onClick={() => clickedRaize()}>倍賭け</button> :
-                <button className='raize'
+                <Button className='raize' onClick={() => clickedRaize()}>倍賭け</Button> :
+                <Button className='raize'
                         style={{
                             textDecoration: 'line-through' ,
                             textDecorationThickness : '1.50px'
-                        }}>倍賭け</button>
+                        }}>倍賭け</Button>
             }
-            <button className='stand' onClick={() => dispatch(chooseRaisetoFalse())}>そのまま</button>
+            <Button className='stand' onClick={() => dispatch(chooseRaisetoFalse())}>そのまま</Button>
         </div>
     )
 }

@@ -27,36 +27,40 @@ const Main = () => {
 
     return (
         <Provider store={store}>
-            <div className='w-full grid md:grid-cols-2 gap-8'>
-                <div>
-                    <Header />
-                    <Character />
-                    {!noGuidance ? 
-                        <div className='bg-table-color border-4 border-black' style={{"borderRadius": "60px"}}>
-                            <Guidance />
-                            <div className='clearGuidance'>
-                                <button className='clearButton' onClick={() => clearButtonHandler()}>
-                                    ゲームを始める
-                                </button>
+            <div className='min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white'>
+                <Header />
+                <main className="container mx-auto px-4 py-8">
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <Character />
+                        {!noGuidance ? 
+                            <div className='bg-table-color border-4 border-black' style={{"borderRadius": "60px"}}>
+                                <Guidance />
+                                <div className='clearGuidance'>
+                                    <button className='clearButton' onClick={() => clearButtonHandler()}>
+                                        ゲームを始める
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        :
-                        <>
-                        <div className='bg-table-color border-4 border-black' style={{"borderRadius": "60px"}}>
-                            <Message1 />
-                            <Message4 />
-                            <Cards />
-                            <Message2 />
-                            <Message3 />
-                            <BetPointDisp />
-                        </div>
-                        <Buttons /> 
-                        </>
-                    }
-                </div>
-                <div className='hidden md:block mt-10'>
-                    <GameDetail />
-                </div>
+                            :
+                            <>
+                            <div className="bg-green-800 text-white">
+                                <div className="p-6 flex flex-col items-center">
+                                    <div className="space-y-1 mb-4 text-center">
+                                        <Message1 />
+                                        <Message4 />
+                                        <Message2 />
+                                        <Message3 />
+                                    </div>
+                                    <Cards />
+                                    <BetPointDisp />
+                                </div>
+                            </div>
+                            <Buttons /> 
+                            </>
+                        }
+                        <GameDetail />
+                    </div>
+                </main>
             </div>
         </Provider>
     )

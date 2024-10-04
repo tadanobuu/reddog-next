@@ -1,6 +1,6 @@
-import BetButton from './betButton';
-import RaizeButton from './raizeButton';
-import TrunButton from './trunButton';
+import BetButton from './buttonComps/betButton';
+import RaizeButton from './buttonComps/raizeButton';
+import TrunButton from './buttonComps/trunButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { win, lose, resetBetPoint } from "../../../redux/slices/PointSlice";
 import { clearGame } from '../../../redux/slices/GameSlice';
@@ -45,7 +45,7 @@ const Buttons = () => {
   }
 
   return (
-    <div className='buttons'>
+    <div className="flex justify-center space-x-4 mt-6">
     {
       !point && !betPoint ?
         <GameoverAndResult />
