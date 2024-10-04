@@ -1,11 +1,11 @@
-import BetButton from './buttons/betButton';
-import RaizeButton from './buttons/raizeButton';
-import TrunButton from './buttons/trunButton';
+import BetButton from './betButton';
+import RaizeButton from './raizeButton';
+import TrunButton from './trunButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { win, lose, resetBetPoint } from "../../features/cart/PointSlice";
 import { clearGame } from '../../features/game/GameSlice';
 import { gameHistory, gameResult } from '../../features/result/ResultSlice';
-import GameoverAndResult from './GameoverAndResult';
+import GameoverAndResult from '../GameoverAndResult';
 import { betTimetoTrue, buttonsReset, cardOpen } from '../../features/buttons/ButtonsSlice';
 
 const Buttons = () => {

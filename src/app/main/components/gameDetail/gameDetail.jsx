@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 
-const SideManu = () => {
+const GameDetail = () => {
 
     const { maxPoint, gameCount, winCount, loseCount, resultHistory } = useSelector((store) => store.result)
 
@@ -40,4 +40,4 @@ const SideManu = () => {
     )
 }
 
-export default SideManu
+export default GameDetail
