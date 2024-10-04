@@ -2,11 +2,11 @@ import BetButton from './betButton';
 import RaizeButton from './raizeButton';
 import TrunButton from './trunButton';
 import { useDispatch, useSelector } from 'react-redux';
-import { win, lose, resetBetPoint } from "../../features/cart/PointSlice";
-import { clearGame } from '../../features/game/GameSlice';
-import { gameHistory, gameResult } from '../../features/result/ResultSlice';
-import GameoverAndResult from '../GameoverAndResult';
-import { betTimetoTrue, buttonsReset, cardOpen } from '../../features/buttons/ButtonsSlice';
+import { win, lose, resetBetPoint } from "../../../redux/slices/PointSlice";
+import { clearGame } from '../../../redux/slices/GameSlice';
+import { gameHistory, gameResult } from '../../../redux/slices/ResultSlice';
+import { betTimetoTrue, buttonsReset, cardOpen } from '../../../redux/slices/ButtonsSlice';
+import GameoverAndResult from '../result/GameoverAndResult';
 
 const Buttons = () => {
 

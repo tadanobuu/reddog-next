@@ -1,12 +1,12 @@
-import redDog from "../dogs/red.png"
-import purpleDog from "../dogs/purple.png"
-import yellowDog from "../dogs/yellow.png"
-import orangeDog from "../dogs/orange.png"
-import goldDog from "../dogs/gold.png"
-import lightblueDog from "../dogs/lightblue.png"
-import greenDog from "../dogs/green.png"
-import blackDog from "../dogs/black.png"
-import whiteDog from "../dogs/white.png"
+import redDog from "../../dogs/red.png"
+import purpleDog from "../../dogs/purple.png"
+import yellowDog from "../../dogs/yellow.png"
+import orangeDog from "../../dogs/orange.png"
+import goldDog from "../../dogs/gold.png"
+import lightblueDog from "../../dogs/lightblue.png"
+import greenDog from "../../dogs/green.png"
+import blackDog from "../../dogs/black.png"
+import whiteDog from "../../dogs/white.png"
 import { useSelector } from 'react-redux'
 
 const Character = () => {
