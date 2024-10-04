@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { add, minus } from '../../../features/cart/PointSlice';
-import { newGame } from '../../../features/game/GameSlice';
-import { betTimetoFalse } from '../../../features/buttons/ButtonsSlice';
+import { add, minus } from '../../../redux/slices/PointSlice';
+import { newGame } from '../../../redux/slices/GameSlice';
+import { betTimetoFalse } from '../../../redux/slices/ButtonsSlice';
 
 const BetButton = () => {
 
