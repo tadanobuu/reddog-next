@@ -21,7 +21,7 @@ const Message2 = () => {
           odds ?
           <p className='odds' style={style}>{odds}倍</p>
           :
-          <p></p>
+          <p className="invisible">This is invisible but still takes up space</p>
       }
     </div>
   )

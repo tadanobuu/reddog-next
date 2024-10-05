@@ -24,7 +24,7 @@ const Message1 = () => {
               <p className='text2'>{spread}</p>
             </>
             :
-            <p></p>
+            <p className="invisible">This is invisible but still takes up space</p>
       }
     </div>
   )

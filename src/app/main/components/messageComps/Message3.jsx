@@ -48,7 +48,8 @@ const Message3 = () => {
                 text === "引き分け" && !isPair ?
                 <p className='result'style={{'fontSize': '15px' , 'background': '#FFFFFF'}}>引き分け</p>
                 :
-                <p></p>}
+                <p className="invisible">This is invisible but still takes up space</p>
+            }
         </div>
     )
 }
