@@ -48,10 +48,10 @@ const Message4 = () => {
     return (
         <>
             {
-            card1 ?
+            card1 && !isConsecutive ?
             <div className='message4'>{text}</div>
             :
-            <div className='message4'></div>
+            <div className="invisible">This is invisible but still takes up space</div>
             }
         </>
     )

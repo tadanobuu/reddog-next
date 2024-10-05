@@ -16,7 +16,7 @@ const Cards = () => {
   }
 
   return (
-    <div className="flex justify-center space-x-1 sm:space-x-4 my-4 sm:my-6">
+    <div className="flex justify-center space-x-1 sm:space-x-4 mb-4 sm:mb-6">
       <div>
         <Card className="w-24 h-36 bg-white text-black items-center justify-center shadow-md">
           <Image 
