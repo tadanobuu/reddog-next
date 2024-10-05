@@ -6,23 +6,23 @@ const Message1 = () => {
   const { spread, isPair, isConsecutive } = useSelector((store) => store.game);
 
   return (
-    <div className='textArea'>
+    <div className='font-medium'>
       {
         isPair ?
         <>
-          <p className='text3'>ペア</p>
+          <div className='text3'>ペア</div>
         </>
         :
           isConsecutive ?
           <>
-            <p className='text3'>連続</p>
+            <div className='text3'>連続</div>
           </>
           :
             spread ? 
-            <>
-              <p className='text1'>間隔</p>
-              <p className='text2'>{spread}</p>
-            </>
+            <div className='flex justify-center space-x-2'>
+              <div className='text1'>間隔</div>
+              <div className='text2'>{spread}</div>
+            </div>
             :
             <p className="invisible">This is invisible but still takes up space</p>
       }
