@@ -16,19 +16,23 @@ const RaizeButton = () => {
     const chk = point >= betPoint ? true : false;
 
     return (
-        <div className='standOrRaize'>
-            <p className='raizeText'>bet額を倍にしますか？</p>
-            {
-                chk ?
-                <Button className='raize' onClick={() => clickedRaize()}>倍賭け</Button> :
-                <Button className='raize'
-                        style={{
-                            textDecoration: 'line-through' ,
-                            textDecorationThickness : '1.50px'
-                        }}>倍賭け</Button>
-            }
-            <Button className='stand' onClick={() => dispatch(chooseRaisetoFalse())}>そのまま</Button>
-        </div>
+        <>
+            <div className="flex justify-center mt-2">
+                <p className='raizeText'>bet額を倍にしますか？</p>
+            </div>
+            <div className="flex justify-center mt-2 space-x-2">
+                {
+                    chk ?
+                    <Button className='raize' onClick={() => clickedRaize()}>倍賭け</Button> :
+                    <Button className='raize'
+                            style={{
+                                textDecoration: 'line-through' ,
+                                textDecorationThickness : '1.50px'
+                            }}>倍賭け</Button>
+                }
+                <Button className='stand' onClick={() => dispatch(chooseRaisetoFalse())}>そのまま</Button>
+            </div>
+        </>
     )
 }
 

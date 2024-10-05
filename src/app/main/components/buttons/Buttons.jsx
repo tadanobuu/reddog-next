@@ -45,7 +45,7 @@ const Buttons = () => {
   }
 
   return (
-    <div className="flex justify-center space-x-4 mt-6">
+    <>
     {
       !point && !betPoint ?
         <GameoverAndResult />
@@ -68,7 +68,7 @@ const Buttons = () => {
                   <button className='toNextGame' onClick={() => reset()}>次のゲームへ</button>
                 </div>
     }
-    </div>
+    </>
   )
 }
 

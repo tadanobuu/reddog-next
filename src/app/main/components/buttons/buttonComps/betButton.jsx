@@ -18,7 +18,7 @@ const BetButton = () => {
 
     return (
         <>
-            <div className='betButtons'>
+            <div className="flex justify-center space-x-2 mt-6">
                 { totalPoint < 1000 ?
                     <>
                         <Button className='add10' onClick={() => dispatch(add(10))}>+10</Button>
@@ -33,12 +33,11 @@ const BetButton = () => {
                         <Button className='minus1000' onClick={() => dispatch(minus(1000))}>-1000</Button>
                     </>
                 }
-
             </div>
-            <div className='decide'>
-            {
-                betPoint ? <Button className='decideButton' onClick={() => submit()}>決定</Button> : <div></div>
-            }
+            <div className="flex justify-center mt-3">
+                {
+                    betPoint ? <Button className='decideButton' onClick={() => submit()}>決定</Button> : <div className='my-5'></div>
+                }
             </div>
         </>
     )
