@@ -1,12 +1,14 @@
 import BetButton from './buttonComps/betButton';
 import RaizeButton from './buttonComps/raizeButton';
 import TrunButton from './buttonComps/trunButton';
+import GameoverAndResult from '../result/GameoverAndResult';
 import { useDispatch, useSelector } from 'react-redux';
 import { win, lose, resetBetPoint } from "../../../redux/slices/PointSlice";
 import { clearGame } from '../../../redux/slices/GameSlice';
 import { gameHistory, gameResult } from '../../../redux/slices/ResultSlice';
 import { betTimetoTrue, buttonsReset, cardOpen } from '../../../redux/slices/ButtonsSlice';
-import GameoverAndResult from '../result/GameoverAndResult';
+import { Button } from '@/components/ui/button';
+
 
 const Buttons = () => {
 
@@ -51,8 +53,8 @@ const Buttons = () => {
         <GameoverAndResult />
           :
         isConsecutive ?
-        <div className='nextGame'>
-          <button className='toNextGame' onClick={() => consecutiveToReset()}>次のゲームへ</button>
+        <div className='flex justify-center mt-3'>
+          <Button className='toNextGame' onClick={() => consecutiveToReset()}>次のゲームへ</Button>
         </div>
         :
           betTime ?
@@ -64,8 +66,8 @@ const Buttons = () => {
               trunCard ?
                 <TrunButton clickTrunCard={clickTrunCard} />
               :
-                <div className='nextGame'>
-                  <button className='toNextGame' onClick={() => reset()}>次のゲームへ</button>
+                <div className='flex justify-center mt-3'>
+                  <Button className='toNextGame' onClick={() => reset()}>次のゲームへ</Button>
                 </div>
     }
     </>
