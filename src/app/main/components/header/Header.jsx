@@ -60,12 +60,12 @@ const Header = () => {
             </div>
             <div className="flex flex-grow justify-end space-x-4">
                 <Link href="/rules" passHref>
-                <Button variant="outline" size="sm">
+                <Button className="text-black" variant="outline" size="sm">
                     <Info className="w-4 h-4 mr-2" />
                     ルール
                 </Button>
                 </Link>
-                <Button variant="outline" size="sm" onClick={() => {}}>
+                <Button className="text-black" variant="outline" size="sm" onClick={() => {}}>
                     <Share2 className="w-4 h-4 mr-2" />
                     <a href={'http://twitter.com/share?url=https://reddog-app-caccb.web.app/&text=' + (totalPoint) + 'pt持っています！%20%23レッドドッグ%20'} target='_blank' rel='noopener noreferrer'>
                         Xでシェア
