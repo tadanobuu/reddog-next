@@ -1,3 +1,5 @@
+'use client';
+
 import BetButton from './buttonComps/betButton';
 import RaizeButton from './buttonComps/raizeButton';
 import TrunButton from './buttonComps/trunButton';
@@ -35,7 +37,7 @@ const Buttons = () => {
   const clickTrunCard = () => {
     // ボタン押下後に待機時間を設ける
     setTimeout(() => {
-      if(iswin){
+      if(isWin){
         dispatch(win(odds));
       }else{
         dispatch(lose());
