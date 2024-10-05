@@ -24,7 +24,7 @@ const Main = () => {
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="relative">
                         <Character />
-                        <Card className="bg-green-800 text-white pt-12 pb-6 px-4 sm:px-6 mt-12 relative overflow-hidden">
+                        <Card className="bg-green-800 text-white pt-12 pb-6 px-4 sm:px-6 mt-20 relative overflow-hidden">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-700 to-green-900"></div>
                             <CardContent className="relative z-10">
                             <div className="space-y-1 mb-4 text-center">
