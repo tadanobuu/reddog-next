@@ -7,6 +7,7 @@ import lightblueDog from "../../dogs/lightblue.png"
 import greenDog from "../../dogs/green.png"
 import blackDog from "../../dogs/black.png"
 import whiteDog from "../../dogs/white.png"
+import Image from "next/image"
 import { useSelector } from 'react-redux'
 
 const Character = () => {
@@ -49,8 +50,8 @@ const Character = () => {
         <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
             {
                 totalPoint ?
-                <img src={dog} className="w-24 h-24 rounded-full border-4 border-yellow-400 shadow-lg" alt='somevalue'/> :
-                <img src={dog} className="w-24 h-24 rounded-full border-4 border-yellow-400 shadow-lg hidden" alt='somevalue'/> // 犬消滅
+                <Image src={dog} className="w-24 h-24 rounded-full border-4 border-yellow-400 shadow-lg" alt='somevalue' style={{width: '100%'}}/> :
+                <Image src={dog} className="w-24 h-24 rounded-full border-4 border-yellow-400 shadow-lg hidden" alt='somevalue' style={{width: '100%'}}/> // 犬消滅
             }
         </div>
     )
