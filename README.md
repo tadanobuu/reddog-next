@@ -8,7 +8,7 @@
 ※こちらのアプリケーションは個人製作したアプリケーションを、Next.jsに移行するため新規プロジェクトとして作成しております。
 
 # URL
-https://reddog-app-caccb.web.app/  
+https://reddog-next.vercel.app/  
 
 # 使用技術
 ・React  
