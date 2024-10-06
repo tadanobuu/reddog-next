@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 概要
+カジノで行えるゲームの1つ  
+「レッドドッグ」をwebアプリケーションでゲームとして遊ぶことができるサイトです  
 
-## Getting Started
+持ち点100ptからスタート  
+獲得した得点に応じて中央のキャラクター(犬)の色が変化します   
 
-First, run the development server:
+※こちらのアプリケーションは個人製作したアプリケーションを、Next.jsに移行するため新規プロジェクトとして作成しております。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# URL
+https://reddog-app-caccb.web.app/  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 使用技術
+・React  
+・Next.js 14  
+・Redux Toolkit  
+・Vercel  
+・Tailwind CSS  
+・chadcn/ui  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 使用したフリー素材
+・Loose Drawing  
+　https://loosedrawing.com/tag/animal/  
+　犬のイラストで使用
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+・いらすとや  
+　https://www.irasutoya.com/  
+　カード(トランプ)のイラストで使用
 
-## Learn More
+# 機能一覧
+・ゲーム「レッドドッグ」  
+・X投稿機能(現在の持ち点を投稿)　　
 
-To learn more about Next.js, take a look at the following resources:
+# 使用方法
+## ゲームのルール
+アプリケーション内に画像付きで説明があります  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+【確認方法】  
+タイトル画面、ゲーム画面に配置している「ルール」ボタンをタップ  
+※ゲーム中どのタイミングでも確認できます  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ゲームの操作方法
+ゲーム中は必要最低限のボタンが画面下部に表示されます  
+① ベットするptを決める(持ち点合計によってボタンで操作できるpt額を変更)  
+② 倍賭けができる場合: 倍賭けを するか、しないか の2択をボタンをタップして決定  
+③ 引き分けが確定していない場合: 3枚目のカードをめくる  
+④ 「次のゲームへ」ボタンをタップし①に戻る  
+以後繰り返し  
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ゲームオーバーになった場合
+画面をリロードして新しいゲームを始めてください  
