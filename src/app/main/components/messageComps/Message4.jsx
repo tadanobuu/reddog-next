@@ -49,7 +49,7 @@ const Message4 = () => {
         <>
             {
             card1 && !isConsecutive ?
-            <div className='message4'>{text}</div>
+            <div className='text-black'>{text}</div>
             :
             <div className="invisible">This is invisible but still takes up space</div>
             }

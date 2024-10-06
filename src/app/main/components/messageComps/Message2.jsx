@@ -5,21 +5,20 @@ const Message2 = () => {
 
   const { odds, isPair } = useSelector((store) => store.game);
 
-  let style = {"color" : "blue"}
-  if(isPair || odds === 6){
-    style = {"color" : "gold", "fontWeight" : "bold"}
-  }else if(odds === 5){
-    style = {"color" : "#FFFFFF", "fontWeight" : "bold"}
-  }
+  const getOddsStyle = () => {
+    if (isPair || odds === 6) return "text-yellow-400 font-bold"
+    if (odds === 5) return "text-red-500 font-bold"
+    return "text-black"
+}
 
   return (
-    <div className='message2'>
+    <div>
       {
         isPair ?
-        <p className='odds' style={style}>1倍 or 12倍</p>
+        <p className={getOddsStyle()}>1倍 or 12倍</p>
         :
           odds ?
-          <p className='odds' style={style}>{odds}倍</p>
+          <p className={getOddsStyle()}>{odds}倍</p>
           :
           <p className="invisible">This is invisible but still takes up space</p>
       }

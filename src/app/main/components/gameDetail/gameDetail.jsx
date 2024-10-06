@@ -39,7 +39,7 @@ const GameDetail = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium">引分</p>
-                    <p className="text-2xl font-bold">{resultHistory}</p>
+                    <p className="text-2xl font-bold">{gameCount - winCount - loseCount}</p>
                   </div>
                   <div>
                     <p className="text-sm font-medium">勝率</p>
