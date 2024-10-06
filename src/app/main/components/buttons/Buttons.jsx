@@ -56,7 +56,7 @@ const Buttons = () => {
           :
         isConsecutive ?
         <div className='flex justify-center mt-3'>
-          <Button className='toNextGame' onClick={() => consecutiveToReset()}>次のゲームへ</Button>
+          <Button className='' onClick={() => consecutiveToReset()}>次のゲームへ</Button>
         </div>
         :
           betTime ?
@@ -69,7 +69,7 @@ const Buttons = () => {
                 <TrunButton clickTrunCard={clickTrunCard} />
               :
                 <div className='flex justify-center mt-3'>
-                  <Button className='toNextGame' onClick={() => reset()}>次のゲームへ</Button>
+                  <Button className='' onClick={() => reset()}>次のゲームへ</Button>
                 </div>
     }
     </>

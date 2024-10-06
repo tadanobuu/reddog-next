@@ -38,7 +38,7 @@ const TrunButton = ({ clickTrunCard }) => {
 
     return (
         <div className="flex justify-center mt-3">
-            <Button className='trunCard' style={style} onClick={() => clickTrunCard()}>OPEN</Button>
+            <Button className='' style={style} onClick={() => clickTrunCard()}>OPEN</Button>
         </div>
     )
 }

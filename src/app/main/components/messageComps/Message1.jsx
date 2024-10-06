@@ -10,18 +10,18 @@ const Message1 = () => {
       {
         isPair ?
         <>
-          <div className='text3'>ペア</div>
+          <div className=''>ペア</div>
         </>
         :
           isConsecutive ?
           <>
-            <div className='text3'>連続</div>
+            <div className=''>連続</div>
           </>
           :
             spread ? 
             <div className='flex justify-center space-x-2'>
-              <div className='text1'>間隔</div>
-              <div className='text2'>{spread}</div>
+              <div className=''>間隔</div>
+              <div className=''>{spread}</div>
             </div>
             :
             <p className="invisible">This is invisible but still takes up space</p>
