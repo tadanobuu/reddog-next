@@ -9,44 +9,26 @@ const Message3 = () => {
     let text = "";
     if(odds === 1){
         text = "引き分け"
-    }else if(isWin === true){
+    }else if(isWin){
         text = "勝ち"
-    }else if(isWin === false){
+    }else if(!isWin){
         text = "負け"
     }
 
-    let style = {'color' : '#0000FF'}
-    let backgroundstyle = {}
-    if(isOpen){
-        backgroundstyle = {'background': '#FFFFFF'}
-        if(isWin && odds === 12){
-            // 12倍勝ち 背景虹色、テキスト黒色
-            style = {'color' : '#000000'}
-            backgroundstyle = {'background': 'linear-gradient(132deg, red,orange,yellow,green,aqua,blue,purple)'}
-        }else if(isWin && odds === 6){
-            // 6倍勝ち 背景金色
-            style = {'color' : '#000000'}
-            backgroundstyle = {'background': 'linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%)'}
-        }else if(isWin && odds === 5){
-            // 5倍勝ち 背景赤色、テキスト白色
-            style = {'color' : '#FFFFFF'}
-            backgroundstyle = {'background': '#FF0000'}
-        }else if(isWin && odds !== 1){
-            // 引き分け以外 テキスト赤色
-            style = {'color' : '#FF0000'}
-        }else{
-            // 引き分け用 フォントサイズ変更
-            style={'fontSize': '15px' , 'background': '#ffffff'}
-        }
+    const getResultStyle = () => {
+        if (isWin && odds === 12) return "animate-pulse bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-white font-bold"
+        if (isWin && odds === 6) return "animate-pulse bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold"
+        if (isWin && odds !== 1) return "bg-red-400 text-black font-bold"
+        return ""
     }
 
     return (
-        <div className='message3' style={backgroundstyle}>
+        <div className='message3'>
             {isOpen ? 
-            <p className='result' style={style}>{text}</p> 
+            <p className={`text-sm sm:text-base py-1 px-2 rounded ${getResultStyle()}`}>{text}</p> 
             : 
                 text === "引き分け" && !isPair ?
-                <p className='result'style={{'fontSize': '15px' , 'background': '#FFFFFF'}}>引き分け</p>
+                <p className={`text-sm sm:text-base py-1 px-2 rounded ${getResultStyle()}`}>引き分け</p>
                 :
                 <p className="invisible">This is invisible but still takes up space</p>
             }
