@@ -59,7 +59,7 @@ const Header = () => {
                 }
             </div>
             <div className="flex flex-grow justify-end space-x-4">
-                <Link href="/rules" passHref>
+                <Link href="/howto" passHref>
                 <Button className="text-black" variant="outline" size="sm">
                     <Info className="w-4 h-4 mr-2" />
                     ルール
