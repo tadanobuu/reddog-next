@@ -43,4 +43,4 @@ const TrunButton = ({ clickTrunCard }) => {
     )
 }
 
-export default TrunButton
+export default TrunButton;

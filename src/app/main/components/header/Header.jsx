@@ -49,7 +49,7 @@ const Header = () => {
 
     return (
         <div className="bg-gray-800 p-4 flex flex-col sm:flex-row justify-between items-center border-b border-gray-700">
-            <h1 className="text-2xl font-bold mb-2 text-red-500 sm:mb-0">RedDog</h1>
+            <h1 className="text-2xl font-bold text-red-500">RedDog</h1>
             <div className="flex-grow text-center py-3 sm:py-0">
                 <p className="text-sm">所持ポイント: {point}</p>
                 { totalPoint >= 50000 ?
