@@ -21,22 +21,22 @@ const BetButton = () => {
             <div className="flex justify-center space-x-2 mt-6">
                 { totalPoint < 1000 ?
                     <>
-                        <Button className='add10' onClick={() => dispatch(add(10))}>+10</Button>
-                        <Button className='minus10' onClick={() => dispatch(minus(10))}>-10</Button>
-                        <Button className='add100' onClick={() => dispatch(add(100))}>+100</Button>
-                        <Button className='minus100' onClick={() => dispatch(minus(100))}>-100</Button>
+                        <Button className='' onClick={() => dispatch(add(10))}>+10</Button>
+                        <Button className='' onClick={() => dispatch(minus(10))}>-10</Button>
+                        <Button className='' onClick={() => dispatch(add(100))}>+100</Button>
+                        <Button className='' onClick={() => dispatch(minus(100))}>-100</Button>
                     </> :
                     <>
-                        <Button className='add100' onClick={() => dispatch(add(100))}>+100</Button>
-                        <Button className='minus100' onClick={() => dispatch(minus(100))}>-100</Button>
-                        <Button className='add1000' onClick={() => dispatch(add(1000))}>+1000</Button>
-                        <Button className='minus1000' onClick={() => dispatch(minus(1000))}>-1000</Button>
+                        <Button className='' onClick={() => dispatch(add(100))}>+100</Button>
+                        <Button className='' onClick={() => dispatch(minus(100))}>-100</Button>
+                        <Button className='' onClick={() => dispatch(add(1000))}>+1000</Button>
+                        <Button className='' onClick={() => dispatch(minus(1000))}>-1000</Button>
                     </>
                 }
             </div>
             <div className="flex justify-center mt-3">
                 {
-                    betPoint ? <Button className='decideButton' onClick={() => submit()}>決定</Button> : <div className='my-5'></div>
+                    betPoint ? <Button className='' onClick={() => submit()}>決定</Button> : <div className='my-5'></div>
                 }
             </div>
         </>

@@ -18,19 +18,19 @@ const RaizeButton = () => {
     return (
         <>
             <div className="flex justify-center mt-2">
-                <p className='raizeText'>bet額を倍にしますか？</p>
+                <p className=''>bet額を倍にしますか？</p>
             </div>
             <div className="flex justify-center mt-2 space-x-2">
                 {
                     chk ?
-                    <Button className='raize' onClick={() => clickedRaize()}>倍賭け</Button> :
-                    <Button className='raize'
+                    <Button className='' onClick={() => clickedRaize()}>倍賭け</Button> :
+                    <Button className=''
                             style={{
                                 textDecoration: 'line-through' ,
                                 textDecorationThickness : '1.50px'
                             }}>倍賭け</Button>
                 }
-                <Button className='stand' onClick={() => dispatch(chooseRaisetoFalse())}>そのまま</Button>
+                <Button className='' onClick={() => dispatch(chooseRaisetoFalse())}>そのまま</Button>
             </div>
         </>
     )

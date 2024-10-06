@@ -23,12 +23,12 @@ const Message3 = () => {
     }
 
     return (
-        <div className='message3'>
+        <div className='text-sm sm:text-base py-1 px-2 rounded'>
             {isOpen ? 
-            <p className={`text-sm sm:text-base py-1 px-2 rounded ${getResultStyle()}`}>{text}</p> 
+            <p className={getResultStyle()}>{text}</p> 
             : 
                 text === "引き分け" && !isPair ?
-                <p className={`text-sm sm:text-base py-1 px-2 rounded ${getResultStyle()}`}>引き分け</p>
+                <p className={getResultStyle()}>引き分け</p>
                 :
                 <p className="invisible">This is invisible but still takes up space</p>
             }
