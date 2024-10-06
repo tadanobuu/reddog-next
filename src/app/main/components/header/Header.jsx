@@ -67,7 +67,7 @@ const Header = () => {
                 </Link>
                 <Button className="text-black" variant="outline" size="sm" onClick={() => {}}>
                     <Share2 className="w-4 h-4 mr-2" />
-                    <a href={'http://twitter.com/share?url=https://reddog-app-caccb.web.app/&text=' + (totalPoint) + 'pt持っています！%20%23レッドドッグ%20'} target='_blank' rel='noopener noreferrer'>
+                    <a href={'http://twitter.com/share?url=https://reddog-next.vercel.app/&text=' + (totalPoint) + 'pt持っています！%20%23レッドドッグ%20'} target='_blank' rel='noopener noreferrer'>
                         Xでシェア
                     </a>
                 </Button>
