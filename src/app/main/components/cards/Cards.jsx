@@ -10,9 +10,9 @@ const Cards = () => {
   let card3Hidden = "";
   let blankCardHidden = "";
   if(!isOpen){
-    card3Hidden = "hidden";
+    card3Hidden = "absolute invisible";
   }else{
-    blankCardHidden = "hidden";
+    blankCardHidden = "absolute invisible";
   }
 
   return (
