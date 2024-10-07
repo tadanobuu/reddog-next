@@ -4,7 +4,7 @@ import gameReducer from "./slices/GameSlice";
 import resultReducer from "./slices/ResultSlice";
 import buttonsReducer from "./slices/ButtonsSlice";
 
-const store = configureStore({
+export const store = configureStore({
     reducer: {
         point: pointReducer,
         game: gameReducer,
@@ -16,5 +16,3 @@ const store = configureStore({
 // RootState型とAppDispatch型をエクスポート
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
-export default store;
