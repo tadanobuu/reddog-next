@@ -12,7 +12,7 @@ import {
 
 const GameDetail = () => {
 
-  const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
     const { maxPoint, gameCount, winCount, loseCount, resultHistory } = useAppSelector((store) => store.result)
 
     return(
