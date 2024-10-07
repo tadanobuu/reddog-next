@@ -1,10 +1,12 @@
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 
 // 勝敗結果を表示するテキスト
 const Message3 = () => {
 
-    const { isWin, odds, isPair } = useSelector((store) => store.game);
-    const { isOpen } = useSelector((store) => store.buttons);
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { isWin, odds, isPair } = useAppSelector((store) => store.game);
+    const { isOpen } = useAppSelector((store) => store.buttons);
 
     let text = "";
     if(odds === 1){

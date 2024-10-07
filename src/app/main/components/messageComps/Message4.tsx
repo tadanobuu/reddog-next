@@ -1,11 +1,13 @@
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 
 // 勝利条件を表示するテキスト
 const Message4 = () => {
 
-    const { isPair, isConsecutive, card1, card2 } = useSelector((store) => store.game);
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { isPair, isConsecutive, card1, card2 } = useAppSelector((store) => store.game);
 
-    const pictures = (cardNum) => {
+    const pictures = (cardNum: number) => {
         // 型変更 数値型 -> 文字
         // 値変更 11以上 -> カードのアルファベット表記
         if(cardNum === 11){
@@ -21,25 +23,25 @@ const Message4 = () => {
         }
     }
 
-    let card1Text = pictures(card1);
+    const card1Text: string = pictures(card1);
 
     let text = "";
     // 「{勝利条件} が出たら勝ち」を作成
     if(isPair){
         text = card1Text + " が出たら勝ち！"
     }else if(!isConsecutive && card1 < card2){
-        const loop = card2 - card1;
+        const loop: number = card2 - card1;
         let winCards = "";
         for(let i = 1; i < loop; i++){
-            let cardNum = card1 + i
+            const cardNum: number = card1 + i
             winCards = winCards + pictures(cardNum) + ","
         }
         text = winCards.slice(0, -1) + " が出たら勝ち！"
     }else if(!isConsecutive && card1 > card2){
-        const loop = card1 - card2;
+        const loop: number = card1 - card2;
         let winCards = "";
         for(let i = 1; i < loop; i++){
-            let cardNum = card2 + i
+            const cardNum: number = card2 + i
             winCards = winCards + pictures(cardNum) + ","
         }
         text = winCards.slice(0, -1) + " が出たら勝ち！"

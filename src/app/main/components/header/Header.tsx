@@ -1,16 +1,18 @@
-import { useSelector } from 'react-redux'
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Info, Share2 } from 'lucide-react'
 
 const Header = () => {
 
-    const { point, betPoint } = useSelector((store) => store.point);
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { point, betPoint } = useAppSelector((store) => store.point);
 
     const totalPoint = point + betPoint;
 
-    let text1 = "";
-    let text2 = "";
+    let text1: string = "";
+    let text2: (string | number) = "";
     switch(true){
         case totalPoint < 100:
             text1 = "赤犬";

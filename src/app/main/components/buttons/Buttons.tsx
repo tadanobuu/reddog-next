@@ -4,7 +4,8 @@ import BetButton from './buttonComps/betButton';
 import RaizeButton from './buttonComps/raizeButton';
 import TrunButton from './buttonComps/trunButton';
 import GameoverAndResult from '../result/GameoverAndResult';
-import { useDispatch, useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../../redux/store'
 import { win, lose, resetBetPoint } from "../../../redux/slices/PointSlice";
 import { clearGame } from '../../../redux/slices/GameSlice';
 import { gameHistory, gameResult } from '../../../redux/slices/ResultSlice';
@@ -15,9 +16,10 @@ import { Button } from '@/components/ui/button';
 const Buttons = () => {
 
   const dispatch = useDispatch();
-  const { isWin, odds, isConsecutive, isPair } = useSelector((store) => store.game);
-  const { point, betPoint } = useSelector((store) => store.point);
-  const { betTime, chooseRaise, trunCard } = useSelector((store) => store.buttons);
+  const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+  const { isWin, odds, isConsecutive, isPair } = useAppSelector((store) => store.game);
+  const { point, betPoint } = useAppSelector((store) => store.point);
+  const { betTime, chooseRaise, trunCard } = useAppSelector((store) => store.buttons);
 
   const reset = () => {
     dispatch(buttonsReset());
@@ -28,7 +30,7 @@ const Buttons = () => {
   const consecutiveToReset = () => {
     dispatch(betTimetoTrue());
     dispatch(win(odds));
-    dispatch(gameResult());
+    dispatch(gameResult(0));
     dispatch(gameHistory("draw"));
     dispatch(resetBetPoint());
     dispatch(clearGame());

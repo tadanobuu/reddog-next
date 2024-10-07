@@ -1,4 +1,5 @@
-import { useSelector } from "react-redux"
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
     Table,
@@ -11,7 +12,8 @@ import {
 
 const GameDetail = () => {
 
-    const { maxPoint, gameCount, winCount, loseCount, resultHistory } = useSelector((store) => store.result)
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { maxPoint, gameCount, winCount, loseCount, resultHistory } = useAppSelector((store) => store.result)
 
     return(
         <div className="stats-area">

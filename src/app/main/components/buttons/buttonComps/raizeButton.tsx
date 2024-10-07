@@ -1,11 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../../redux/store'
 import { add } from '../../../../redux/slices/PointSlice';
 import { chooseRaisetoFalse } from '../../../../redux/slices/ButtonsSlice';
 import { Button } from '@/components/ui/button';
 
 const RaizeButton = () => {
 
-    const { point, betPoint } = useSelector((store) => store.point);
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { point, betPoint } = useAppSelector((store) => store.point);
     const dispatch = useDispatch();
 
     const clickedRaize = () =>{

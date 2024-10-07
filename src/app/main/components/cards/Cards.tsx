@@ -1,11 +1,13 @@
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 import Image from 'next/image';
 import { Card } from "@/components/ui/card"
 
 const Cards = () => {
 
-  const { card1Url, card2Url, card3Url } = useSelector((store) => store.game);
-  const { isOpen } = useSelector((store) => store.buttons);
+  const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+  const { card1Url, card2Url, card3Url } = useAppSelector((store) => store.game);
+  const { isOpen } = useAppSelector((store) => store.buttons);
 
   let card3Hidden = "";
   let blankCardHidden = "";
