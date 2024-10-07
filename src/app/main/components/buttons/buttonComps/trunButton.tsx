@@ -1,9 +1,15 @@
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../../redux/store'
 import { Button } from '@/components/ui/button';
 
-const TrunButton = ({ clickTrunCard }) => {
+interface turnButtonProps {
+    clickTrunCard: () => void;
+}
 
-    const { isWin, rand, odds } = useSelector((store) => store.game);
+const TrunButton = ({ clickTrunCard }: turnButtonProps) => {
+
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { isWin, rand, odds } = useAppSelector((store) => store.game);
 
     let style = { 'background': '#87befd', 'borderBottom': 'solid 3px #679ebb' };
     if(isWin && odds !== 1){

@@ -20,7 +20,7 @@ const resultSlice = createSlice({
     name: "result",
     initialState,
     reducers: {
-        gameResult: (state: resultState, action: {payload: number} = {payload: 0}) => {
+        gameResult: (state: resultState, action: {payload: number}) => {
             
             if( state.maxPoint < action.payload ){
                 state.maxPoint = action.payload;

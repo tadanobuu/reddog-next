@@ -1,4 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../../redux/store'
 import { add, minus } from '../../../../redux/slices/PointSlice';
 import { newGame } from '../../../../redux/slices/GameSlice';
 import { betTimetoFalse } from '../../../../redux/slices/ButtonsSlice';
@@ -6,7 +7,8 @@ import { Button } from '@/components/ui/button';
 
 const BetButton = () => {
 
-    const { betPoint, point } = useSelector((store) => store.point);
+    const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+    const { betPoint, point } = useAppSelector((store) => store.point);
     const dispatch = useDispatch();
 
     const submit = () => {
