@@ -21,7 +21,7 @@ const CardImage = ({ src , alt }: cardImageProps) => (
 
 const CardSet = ({ cards }: cardSetProps) => (
     <div className="flex justify-center space-x-2 my-4">
-        {cards.map((card:string, index:number) => (
+        {cards.map((card, index) => (
             <CardImage key={index} src={card} alt={"card"}/>
         ))}
     </div>
