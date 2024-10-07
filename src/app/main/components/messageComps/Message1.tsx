@@ -1,9 +1,11 @@
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 
 // 2枚のカードの関係性を表示するテキスト
 const Message1 = () => {
 
-  const { spread, isPair, isConsecutive } = useSelector((store) => store.game);
+  const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+  const { spread, isPair, isConsecutive } = useAppSelector((store) => store.game);
 
   return (
     <div className='font-medium'>

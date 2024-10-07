@@ -1,9 +1,11 @@
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook ,useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store'
 
 // オッズを表示するテキスト
 const Message2 = () => {
 
-  const { odds, isPair } = useSelector((store) => store.game);
+  const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+  const { odds, isPair } = useAppSelector((store) => store.game);
 
   const getOddsStyle = () => {
     if (isPair || odds === 6) return "text-yellow-400 font-bold"
