@@ -1,5 +1,5 @@
 import { TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store'
+import { RootState } from '../../../../store/store'
 
 // 勝敗結果を表示するテキスト
 const Message3 = () => {

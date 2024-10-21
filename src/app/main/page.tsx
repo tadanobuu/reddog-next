@@ -1,17 +1,17 @@
 'use client';
 
-import Header from './components/header/Header'
-import Character from './components/character/Character'
-import Message1 from './components/messageComps/Message1'
-import Cards from './components/cards/Cards'
-import Message2 from './components/messageComps/Message2'
-import Buttons from './components/buttons/Buttons'
-import BetPointDisp from './components/betPointDisp/betPointDisp'
-import Message3 from './components/messageComps/Message3'
-import Message4 from './components/messageComps/Message4'
-import GameDetail from './components/gameDetail/gameDetail'
+import Header from '../../features/components/main/header/Header'
+import Character from '../../features/components/main/character/Character'
+import Message1 from '../../features/components/main/messageComps/Message1'
+import Cards from '../../features/components/main/cards/Cards'
+import Message2 from '../../features/components/main/messageComps/Message2'
+import Buttons from '../../features/components/main/buttons/Buttons'
+import BetPointDisp from '../../features/components/main/betPointDisp/betPointDisp'
+import Message3 from '../../features/components/main/messageComps/Message3'
+import Message4 from '../../features/components/main/messageComps/Message4'
+import GameDetail from '../../features/components/main/gameDetail/gameDetail'
 import { Provider } from 'react-redux';
-import { store } from '../redux/store';
+import { store } from '../../store/store';
 import { Card, CardContent } from "@/components/ui/card"
 
 const Main = () => {

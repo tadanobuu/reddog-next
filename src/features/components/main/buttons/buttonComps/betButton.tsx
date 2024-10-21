@@ -1,8 +1,8 @@
 import { useDispatch, TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store'
-import { add, minus } from '../../../../redux/slices/PointSlice';
-import { newGame } from '../../../../redux/slices/GameSlice';
-import { betTimetoFalse } from '../../../../redux/slices/ButtonsSlice';
+import { RootState } from '../../../../../store/store'
+import { add, minus } from '../../../../../store/slices/PointSlice';
+import { newGame } from '../../../../../store/slices/GameSlice';
+import { betTimetoFalse } from '../../../../../store/slices/ButtonsSlice';
 import { Button } from '@/components/ui/button';
 
 const BetButton = () => {

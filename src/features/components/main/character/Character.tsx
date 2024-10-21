@@ -1,15 +1,15 @@
-import redDog from "../../dogs/red.png"
-import purpleDog from "../../dogs/purple.png"
-import yellowDog from "../../dogs/yellow.png"
-import orangeDog from "../../dogs/orange.png"
-import goldDog from "../../dogs/gold.png"
-import lightblueDog from "../../dogs/lightblue.png"
-import greenDog from "../../dogs/green.png"
-import blackDog from "../../dogs/black.png"
-import whiteDog from "../../dogs/white.png"
+import redDog from "../../../../public/images/dogs/red.png"
+import purpleDog from "../../../../public/images/dogs/purple.png"
+import yellowDog from "../../../../public/images/dogs/yellow.png"
+import orangeDog from "../../../../public/images/dogs/orange.png"
+import goldDog from "../../../../public/images/dogs/gold.png"
+import lightblueDog from "../../../../public/images/dogs/lightblue.png"
+import greenDog from "../../../../public/images/dogs/green.png"
+import blackDog from "../../../../public/images/dogs/black.png"
+import whiteDog from "../../../../public/images/dogs/white.png"
 import Image from "next/image"
 import { TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store'
+import { RootState } from '../../../../store/store'
 
 const Character = () => {
 

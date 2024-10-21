@@ -1,5 +1,5 @@
 import { TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store'
+import { RootState } from '../../../../store/store'
 import Image from 'next/image';
 import { Card } from "@/components/ui/card"
 

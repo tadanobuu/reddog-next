@@ -1,7 +1,7 @@
 import { useDispatch, TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store'
-import { add } from '../../../../redux/slices/PointSlice';
-import { chooseRaisetoFalse } from '../../../../redux/slices/ButtonsSlice';
+import { RootState } from '../../../../../store/store'
+import { add } from '../../../../../store/slices/PointSlice';
+import { chooseRaisetoFalse } from '../../../../../store/slices/ButtonsSlice';
 import { Button } from '@/components/ui/button';
 
 const RaizeButton = () => {
@@ -19,7 +19,7 @@ const RaizeButton = () => {
 
     return (
         <>
-            <div className="flex justify-center mt-2">
+            <div className="flex justify-center mt-4">
                 <p className=''>bet額を倍にしますか？</p>
             </div>
             <div className="flex justify-center mt-2 space-x-2">
