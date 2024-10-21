@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import RuleSection from './components/ruleSection';
-import CardSet from './components/cardSet';
+import RuleSection from '../../features/components/howto/ruleSection';
+import CardSet from '../../features/components/howto/cardSet';
 import Link from "next/link";
 
 const RedDogRules = () => {

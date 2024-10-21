@@ -1,5 +1,5 @@
 import { TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store'
+import { RootState } from '../../../../store/store'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Info, Share2 } from 'lucide-react'

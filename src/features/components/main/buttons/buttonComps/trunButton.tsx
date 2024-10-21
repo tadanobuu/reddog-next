@@ -1,5 +1,5 @@
 import { TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store'
+import { RootState } from '../../../../../store/store'
 import { Button } from '@/components/ui/button';
 
 interface turnButtonProps {
@@ -43,7 +43,7 @@ const TrunButton = ({ clickTrunCard }: turnButtonProps) => {
     }
 
     return (
-        <div className="flex justify-center mt-3">
+        <div className="flex justify-center mt-4">
             <Button className='' style={style} onClick={() => clickTrunCard()}>OPEN</Button>
         </div>
     )

@@ -1,5 +1,5 @@
 import { TypedUseSelectorHook ,useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store'
+import { RootState } from '../../../../store/store'
 
 // 2枚のカードの関係性を表示するテキスト
 const Message1 = () => {
