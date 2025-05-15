@@ -4,6 +4,8 @@ import jakarta.validation.constraints.Min;
 
 /**
  * ResultリソースのDTOクラス
+ * 
+ * @author Tadanobuu
  */
 public class ResultRequest {
     @Min(value = 0)

@@ -3,7 +3,7 @@ package com.example.backend.domain;
 /**
  * リザルト情報のdomainクラス
  * 
- * @author Tadanobu Tokiwa
+ * @author Tadanobuu
  */
 public class Result {
     private Integer id;
