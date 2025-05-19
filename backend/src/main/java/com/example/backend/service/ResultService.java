@@ -1,6 +1,10 @@
 package com.example.backend.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.backend.dto.ResultRequest;
+import com.example.backend.repository.ResultsRepository;
 
 /**
  * ResultリソースのServiceクラス
@@ -10,8 +14,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class ResultService {
 
-    public int insert(){
-        System.out.println("insertメソッドが実行されました");
-        return 0;
+    @Autowired
+    ResultsRepository resultsRepository;
+
+    /**
+     * リザルトを新規登録します
+     * @param result リクエストされたリザルト
+     */
+    public void insert(ResultRequest result){
+        resultsRepository.insert(result);
     }
 }

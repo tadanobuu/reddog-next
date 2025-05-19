@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.backend.domain.Rank;
+import com.example.backend.dto.ResultRequest;
 import com.example.backend.service.ResultService;
 
 /**
  * リザルト情報のAPIコントローラクラス
+ * 
+ * @author Tadanobuu
  */
 @RestController
 @RequestMapping("/results")
@@ -30,11 +32,11 @@ public class ResultApiController {
     private ResultService resultService;
 
     @PostMapping("/{score}")
-    public ResponseEntity<Rank> submitScore(@PathVariable Integer score){
-        Rank rank = new Rank(1);
+    public ResponseEntity<ResultRequest> submitScore(@PathVariable Integer score){
+        ResultRequest result = new ResultRequest(score);
 
-        resultService.insert();
-        return ResponseEntity.ok(rank);
+        resultService.insert(result);
+        return ResponseEntity.ok(result);
     }
 
 }
