@@ -6,33 +6,33 @@ package com.example.backend.domain;
  * @author Tadanobuu
  */
 public class Result {
-    private Integer id;
-    private Integer score;
+    private Integer rank;
+    private Integer total;
 
-    public Result(Integer id, Integer score) {
-        this.id = id;
-        this.score = score;
+    public Result(Integer rank, Integer total) {
+        this.rank = rank;
+        this.total = total;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getRank() {
+        return rank;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setRank(Integer rank) {
+        this.rank = rank;
     }
 
-    public Integer getScore() {
-        return score;
+    public Integer getTotal() {
+        return total;
     }
 
-    public void setScore(Integer score) {
-        this.score = score;
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
     @Override
     public String toString() {
-        return "Result [id=" + id + ", score=" + score + "]";
+        return "Result [rank=" + rank + ", total=" + total + "]";
     }
 
 }
