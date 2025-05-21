@@ -10,15 +10,15 @@ const GameoverAndResult = () => {
     const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
     const { maxPoint } = useAppSelector((store) => store.result)
     
-    //const [ ranking, setRanking ] = useState<number | null>(null);
-    //const [ total, setTotal ] = useState<number | null>(null);
     const [ connectResult, setConnectResult ] = useState<string | null>(null);
+    const [ rankingText, setRankingText ] = useState<string | null>(null);
 
     useEffect(() => {
         const insertResult = async() => {
             try{
-                await insertResults(maxPoint)
-                setConnectResult("あなたのスコアをランキングに登録しました")
+                const res = await insertResults(maxPoint)
+                setConnectResult("スコアをランキングに登録しました")
+                setRankingText("あなたのスコアは " + res.total + " 件中 " + res.rank + " 位です")
             }catch{
                 setConnectResult("スコアの登録に失敗しました")
             }
@@ -29,9 +29,11 @@ const GameoverAndResult = () => {
     return (
         <div className='flex flex-col items-center justify-conter mt-5'>
             <div>ゲームオーバー</div>
-            {connectResult ?? <div>{connectResult}</div>}
+            <div>今回の最高スコア：{maxPoint}点</div>
+            <div>{connectResult}</div>
+            <div>{rankingText}</div>
         </div>
     )
 }
-//{ranking ?? total ?? <div>{ranking} 位 / 全体 {total} 件中</div>}
+
 export default GameoverAndResult
