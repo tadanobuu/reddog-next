@@ -3,6 +3,7 @@ package com.example.backend.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.backend.domain.Result;
 import com.example.backend.dto.ResultRequest;
 import com.example.backend.repository.ResultsRepository;
 
@@ -23,5 +24,9 @@ public class ResultService {
      */
     public void insert(ResultRequest result){
         resultsRepository.insert(result);
+    }
+
+    public Result getResult(ResultRequest result){
+        return resultsRepository.getResult(result);
     }
 }

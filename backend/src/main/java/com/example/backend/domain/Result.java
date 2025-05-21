@@ -9,11 +9,6 @@ public class Result {
     private Integer rank;
     private Integer total;
 
-    public Result(Integer rank, Integer total) {
-        this.rank = rank;
-        this.total = total;
-    }
-
     public Integer getRank() {
         return rank;
     }
