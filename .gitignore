@@ -45,4 +45,4 @@ next-env.d.ts
 /backend/.classpath
 /backend/.project
 /backend/.settings
-/backend/src/main/resources
+/backend/src/main/resources/application.properties
