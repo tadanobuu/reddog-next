@@ -4,9 +4,18 @@ type resultType = {
 }
 
 export const insertResults = async(score: number): Promise<resultType> => {
+
+    const token: string | undefined = process.env.NEXT_PUBLIC_API_TOKEN
+    if(!token){
+        throw new Error("tokenが未定義です")
+    }
+
     const res = await fetch(
         'http://localhost:8080/results/' + score, {
-            method: 'POST'
+            method: 'POST',
+            headers: {
+                "Authorization": token
+            },
         } 
     )
 
