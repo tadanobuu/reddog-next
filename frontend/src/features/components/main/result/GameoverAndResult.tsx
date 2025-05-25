@@ -10,7 +10,7 @@ const GameoverAndResult = () => {
     const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
     const { maxPoint } = useAppSelector((store) => store.result)
     
-    const [ connectResult, setConnectResult ] = useState<string | null>(null);
+    const [ connectResult, setConnectResult ] = useState<string | null>("ランキング機能に登録中...");
     const [ rankingText, setRankingText ] = useState<string | null>(null);
 
     useEffect(() => {
