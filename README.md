@@ -9,11 +9,8 @@ Red Dog
 ## 技術スタック  
 フロントエンド: Next.js 14, Redux Toolkit (状態管理)  
 UIライブラリ: Tailwind CSS, chadcn/ui 
-データ保存: バックエンドなし  
-デプロイ: Vercel  
-  
-## ※こちらのアプリケーションは個人製作したアプリケーションを、Next.jsに移行するため新規プロジェクトとして作成しております。  
-  
+バックエンド: Spring Boot  
+デプロイ: Vercel, Render    
 
 # URL
 https://reddog-next.vercel.app/  
@@ -124,6 +121,21 @@ https://reddog-next.vercel.app/
   loseCount(敗北数を管理)  
   resultHistory(直近10回の勝敗を管理)  
 
+# バックエンド（REST API）
+
+## 概要
+- Spring Boot 3.x（Java 17）で構築した　REST API サーバー  
+- ゲームのスコアを登録し、順位を返却するエンドポイントを提供
+
+## エンドポイント
+
+| メソッド | パス                       | 説明                               |
+| -------- | -------------------------- | ---------------------------------- |
+| POST     | `{baseUrl}/results/{score}` | `{score}` を登録し、順位を返却する |
+
+- **Path パラメータ**  
+  - `score`（整数）: 登録したいスコア
+
 # 技術スタックの選定理由
 ## Next.js 14
 コンポーネントベースの設計が可能で、フロントエンドの開発を効率化  
@@ -135,3 +147,6 @@ App Routerを使用して画面遷移を実装
 ## Tailwind CSS , chadcn/ui
 Reactプロジェクトに統合が簡単であるため  
 不必要なコンポーネントのインポートがないため軽量  
+## Spring Boot（REST API）  
+Spring Initializr やスターター依存関係により、必要なライブラリのバージョンや設定ファイルの雛形が自動生成され、プロジェクト立ち上げがスムーズに行える  
+Tomcat／Jetty／Undertow を組み込み済みのため、WAR にパッケージングする手間なく `java -jar` で起動可能。CI/CD やコンテナ運用との親和性も高い  
