@@ -8,7 +8,7 @@ Red Dog
   
 ## 技術スタック  
 フロントエンド: Next.js 14, Redux Toolkit (状態管理)  
-UIライブラリ: Tailwind CSS, chadcn/ui 
+UIライブラリ: Tailwind CSS, chadcn/ui  
 バックエンド: Spring Boot  
 デプロイ: Vercel, Render    
 
@@ -125,13 +125,13 @@ https://reddog-next.vercel.app/
 
 ## 概要
 - Spring Boot 3.x（Java 17）で構築した　REST API サーバー  
-- ゲームのスコアを登録し、順位を返却するエンドポイントを提供
+- ゲームのスコアを登録し、順位と全体件数返却するエンドポイントを提供
 
 ## エンドポイント
 
 | メソッド | パス                       | 説明                               |
 | -------- | -------------------------- | ---------------------------------- |
-| POST     | `{baseUrl}/results/{score}` | `{score}` を登録し、順位を返却する |
+| POST     | `{baseUrl}/results/{score}` | `{score}` を登録し、順位と全体件数を返却する |
 
 - **Path パラメータ**  
   - `score`（整数）: 登録したいスコア
