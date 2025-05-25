@@ -1,5 +1,5 @@
 # Stage1: ビルド用イメージ
-FROM maven:3.8.7-openjdk-17-slim AS builder
+FROM maven:3-jdk-17 AS builder
 
 WORKDIR /workspace
 
