@@ -11,7 +11,7 @@ export const insertResults = async(score: number): Promise<resultType> => {
     }
 
     const res = await fetch(
-        'https://reddog-api-607575435044.asia-northeast1.run.app/results/' + score, {
+        'https://reddog-next.onrender.com/results/' + score, {
             method: 'POST',
             headers: {
                 "Authorization": token
